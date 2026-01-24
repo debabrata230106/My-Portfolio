@@ -1,0 +1,119 @@
+#skill {
+  min-height: 100vh;
+  width: 100%;
+    padding: 80px 10% 50px 10%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+#skill > div {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 300px;
+  flex-wrap: wrap;
+}
+
+#skill h2 {
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-align: left;
+  opacity: 0;
+}
+section.animate > h2 {
+  animation: slideRight 1s ease forwards;
+}
+#skill h2 span {
+  color: #0ef;
+}
+#skill a {
+  margin-left: auto;
+  opacity: 0;
+}
+section.animate a {
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 1s;
+}
+.skill-text {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  min-width: 500px;
+}
+.skill-text h3 {
+  font-size: 20px;
+  font-weight: light;
+  letter-spacing: 1px;
+  text-align: left;
+  color: rgba(240, 248, 255, 0.8);
+  opacity: 0;
+}
+section.animate .skill-text h3 {
+  animation: slideRight 1s ease forwards;
+  animation-delay: calc(0.1s * var(--k));
+}
+.skill-text h3 i {
+  color: rgba(0, 238, 255, 0.7);
+  margin-right: 15px;
+}
+.skill-text h3 span {
+  font-size: 30px !important;
+  color: #0ef !important;
+  font-weight: 700 !important;
+}
+.skill-icons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  grid-template-rows: repeat(3, 1fr); /* 3 equal rows */
+  gap: 40px; /* spacing between cells */
+  justify-content: center;
+  align-items: center;
+}
+.skill-icons i,
+.skill-icons img {
+  width: 40px;
+  height: 40px;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+  color: rgb(255, 255, 255);
+  box-shadow:
+    0 0 20px rgba(0, 238, 255, 0.1),
+    0 0 50px rgba(0, 238, 255, 0.6),
+    0 0 200px rgba(0, 238, 255, 0.7),
+    0 0 500px rgba(0, 238, 255, 0.9);
+  opacity: 0;
+}
+section.animate .skill-icons i,
+section.animate .skill-icons img {
+  animation: slideBottom 1s ease forwards;
+  animation-delay: calc(0.1s * var(--d));
+}
+.skill-icons div {
+  transition: all 0.4s ease-in-out;
+}
+.skill-icons div:hover {
+  transform: rotate(360deg);
+}
+.text1 {
+  font-size: 20px !important;
+  font-weight: 100;
+  letter-spacing: 2px;
+  color: rgba(240, 248, 255, 0.5);
+  text-align: center !important;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 0.4s;
+}
+section.animate .text1 {
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 0.4s;
+}

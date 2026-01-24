@@ -1,0 +1,63 @@
+.footer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 50px;
+  padding: 80px 10% 50px 10%;
+  margin-top: 100px; /* extra margin top */
+  overflow-x: hidden;
+  background-color: rgba(0, 0, 0, 0.1);
+  align-items: center;
+}
+.footer div p {
+  color: #dededeee;
+  letter-spacing: 1px;
+  font-weight: 100;
+}
+.footer > p {
+  font-size: large;
+  font-weight: 700;
+  max-width: 600px;
+  letter-spacing: 2px;
+}
+.footer > p > span {
+  color: #0ef;
+}
+.copy-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.copy-info div {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 15px;
+}
+.copy-info div p {
+  width: 370px;
+}
+.copy-info i {
+  color: rgba(0, 238, 255, 0.8);
+}
+.copy-info div i:last-of-type {
+  color: #0ef;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow:
+    0 0 10px #0ef,
+    0 0 30px #0ef;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+.copy-info div i:last-of-type:hover {
+  color: black;
+  background: #0ef;
+}
+.copyright {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 15px;
+  margin-bottom: 5px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.1);
+}

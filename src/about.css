@@ -1,0 +1,68 @@
+#about {
+  min-height: 100vh;
+  width: 100%;
+    padding: 80px 10% 50px 10%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+#about h2 {
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-align: left;
+  opacity: 0;
+}
+section.animate h2 {
+  animation: slideRight 1s ease forwards;
+}
+#about h2 span {
+  color: #0ef;
+}
+#about a {
+  margin-left: auto;
+  opacity: 0;
+}
+section.animate a {
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 1s;
+}
+.about-content {
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 50px;
+}
+.about-content div {
+  width: 350px;
+  min-height: 370px;
+  padding: 50px;
+  border: 1px solid;
+  border-radius: 20px;
+  box-shadow:
+    0 0 5px cyan,
+    0 0 25px cyan;
+  opacity: 0;
+}
+section.animate .about-content div {
+  animation: slideTop 1s ease forwards;
+  animation-delay: calc(0.2s * var(--j));
+}
+.about-content div:hover {
+  background-color: rgba(245, 245, 245, 0.05);
+}
+.about-content div h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.about-content div p {
+  font-size: 17px;
+  opacity: 0.8;
+  letter-spacing: 1px;
+}

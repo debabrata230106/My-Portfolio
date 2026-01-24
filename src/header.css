@@ -1,0 +1,96 @@
+.header {
+  position: fixed;
+  backdrop-filter: blur(30px);
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 10%;
+  background: rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+.logo {
+  position: relative;
+  font-size: 22px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: default;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+}
+.navbar {
+  background: transparent;
+}
+.navbar a {
+  background: transparent;
+  display: inline-block;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-weight: 200;
+  margin-left: 25px;
+  transition: all 0.3s ease-in;
+  opacity: 0;
+  animation: slideTop 0.5s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+}
+.navbar a:hover {
+  color: #0ef;
+}
+.cvbtn {
+  background: linear-gradient(130deg, rgba(255, 255, 255, 0.8), #0ef);
+  cursor: pointer;
+  color: black;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  animation: slideBottom 1s ease forwards;
+  animation-delay: 1.5s;
+}
+.cvbtn:hover {
+  background: linear-gradient(130deg, #0ef, rgba(255, 255, 255, 0.8));
+}
+@media (max-width: 950px) {
+  .cvbtn {
+    margin-right: 200px;
+  }
+}
+.burger {
+  position: fixed;
+  z-index: 110;
+  top: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  gap: 10px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+.burger a {
+  font-size: 17px;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.85);
+}
+.burger a:hover {
+  color: #0ef;
+}
+#hamburger {
+  color: white;
+  position: absolute;
+  margin: 5px 30px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  opacity: 0;
+  animation: slideTop 0.5s ease forwards;
+  animation-delay: 0.2s;
+}
