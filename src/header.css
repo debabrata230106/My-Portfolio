@@ -33,14 +33,12 @@
   text-decoration: none;
   font-weight: 200;
   margin-left: 25px;
-  transition: all 0.3s ease-in;
+  transition: all 0.1s ease;
   opacity: 0;
   animation: slideTop 0.5s ease forwards;
   animation-delay: calc(0.2s * var(--i));
 }
-.navbar a:hover {
-  color: #0ef;
-}
+
 .cvbtn {
   background: linear-gradient(130deg, rgba(255, 255, 255, 0.8), #0ef);
   cursor: pointer;
@@ -77,9 +75,13 @@
 .burger a {
   font-size: 17px;
   letter-spacing: 2px;
+  transition: all 0.1s ease;
   color: rgba(255, 255, 255, 0.85);
 }
-.burger a:hover {
+a:hover {
+  color: white;
+}
+a.active {
   color: #0ef;
 }
 #hamburger {

@@ -34,7 +34,7 @@ function Home() {
         </a>
       </div>
         
-      <img src="../public/myphoto.png" alt="Myphoto" className="image" />
+      <img src="/myphoto.png" alt="Myphoto" className="image" />
     </section>
   );
 }

@@ -5,9 +5,12 @@ import Home from "./home.jsx";
 import Skill from "./skill.jsx";
 import About from "./about.jsx";
 import Project from "./project.jsx";
-import Footer from "./footer.jsx";
+import Contact from "./contact.jsx";
+import { useState } from "react";
 
 function App() {
+  const [activeNav, setActiveNav] = useState("home");
+
   useEffect(() => {
     const sections = document.querySelectorAll("section");
 
@@ -19,6 +22,7 @@ function App() {
             entry.target.classList.remove("animate");
             void entry.target.offsetWidth; // 🔥 force reflow
             entry.target.classList.add("animate");
+            setActiveNav(entry.target.id);
           } else {
             entry.target.classList.remove("animate");
           }
@@ -36,12 +40,12 @@ function App() {
 
   return (
     <div className="main">
-      <Header />
+      <Header activeNav={activeNav} setActiveNav={setActiveNav} />
       <Home />
       <About />
       <Skill />
       <Project />
-      <Footer />
+      <Contact />
     </div>
   );
 }

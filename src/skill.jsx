@@ -23,7 +23,7 @@ export default function Skill() {
                     <div><i style={{"--d": 31}} class="fa-brands fa-square-js"></i></div>
                     <div><i style={{"--d": 25}} class="fa-brands fa-react"></i></div>
                     <div><i style={{"--d": 23}} class="fa-brands fa-bootstrap"></i></div>
-                    <div><img style={{"--d": 21}} src="./public/tailwind.png" alt="tailwind" /></div>
+                    <div><img style={{"--d": 21}} src="/tailwind.png" alt="tailwind" /></div>
                     <div><i style={{"--d": 15}} class="fa-brands fa-square-github"></i></div>
                     <div><i style={{"--d": 17}} class="fa-brands fa-square-git"></i></div>
                     <div><i style={{"--d": 19}} class="fa-brands fa-node-js"></i></div>

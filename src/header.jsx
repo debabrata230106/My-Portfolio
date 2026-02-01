@@ -2,7 +2,7 @@ import "./header.css";
 import "./App.css";
 import { useState, useEffect } from "react";
 
-function Header() {
+function Header( { activeNav, setActiveNav } ) {
   const [width, setWidth] = useState(window.innerWidth);
   const [toggle, setToggle] = useState(false);
 
@@ -47,19 +47,19 @@ function Header() {
           className="navbar"
           style={{ display: width < 950 ? "none" : "block" }}
         >
-          <a href="#home" style={{ "--i": 1 }} className="active">
+          <a href="#home" style={{ "--i": 1 }} className= {activeNav === "home" ? "active" : ""} onClick={() => setActiveNav("home")}>
             Home
           </a>
-          <a href="#about" style={{ "--i": 2 }}>
+          <a href="#about" style={{ "--i": 2 }} className= {activeNav === "about" ? "active" : ""} onClick={() => setActiveNav("about")}>
             About
           </a>
-          <a href="#skill" style={{ "--i": 3 }}>
+          <a href="#skill" style={{ "--i": 3 }} className= {activeNav === "skill" ? "active" : ""} onClick={() => setActiveNav("skill")}>
             Skill
           </a>
-          <a href="#project" style={{ "--i": 4 }}>
+          <a href="#project" style={{ "--i": 4 }} className= {activeNav === "project" ? "active" : ""} onClick={() => setActiveNav("project")}>
             Project
           </a>
-          <a href="#contact" style={{ "--i": 5 }}>
+          <a href="#contact" style={{ "--i": 5 }} className= {activeNav === "contact" ? "active" : ""} onClick={() => setActiveNav("contact")}>
             Contact
           </a>
         </nav>
@@ -71,13 +71,11 @@ function Header() {
           right: toggle ? "0px" : "-180px",
         }}
       >
-        <a href="#home" className="active">
-          Home
-        </a>
-        <a href="#about">About</a>
-        <a href="#skill">Skill</a>
-        <a href="#project">Project</a>
-        <a href="#contact">Contact</a>
+        <a href="#home" className={activeNav === "home" ? "active" : ""} onClick={() => setActiveNav("home")}>Home</a>
+        <a href="#about" className={activeNav === "about" ? "active" : ""} onClick={() => setActiveNav("about")}>About</a>
+        <a href="#skill" className={activeNav === "skill" ? "active" : ""} onClick={() => setActiveNav("skill")}>Skill</a>
+        <a href="#project" className={activeNav === "project" ? "active" : ""} onClick={() => setActiveNav("project")}>Project</a>
+        <a href="#contact" className={activeNav === "contact" ? "active" : ""} onClick={() => setActiveNav("contact")}>Contact</a>
       </nav>
     </>
   );
